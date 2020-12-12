@@ -8,4 +8,4 @@ __copyright__ = 'Copyright 2020 Samaras Dimitris'
 # Version synonym
 VERSION = __version__
 
-default_app_config = 'firebase_auth.apps.FirebaseAuthConfig'
+default_app_config = 'bubbling_firebase_authentication.apps.FirebaseAuthConfig'

@@ -5,7 +5,7 @@ from django.test import TestCase
 from firebase_admin import auth
 from firebase_admin.auth import UserNotFoundError
 
-from firebase_auth import settings
+from bubbling_firebase_authentication import settings
 
 RAW_PASSWORD = "passwd"
 TEST_EMAIL = "firebasetestuser@test.com"

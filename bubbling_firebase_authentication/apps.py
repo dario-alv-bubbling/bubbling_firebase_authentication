@@ -1,11 +1,11 @@
 from django.apps import AppConfig
 
 from firebase_admin import credentials, initialize_app
-from firebase_auth.settings import firebase_auth_settings
+from bubbling_firebase_authentication.settings import firebase_auth_settings
 
 
 class FirebaseAuthConfig(AppConfig):
-    name = "firebase_auth"
+    name = "bubbling_firebase_authentication"
     verbose_name = "Authentication with Firebase app"
 
     def ready(self) -> None:
