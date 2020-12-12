@@ -10,6 +10,6 @@ python setup.py sdist
 
 3. install package locally:
 ```djangotemplate
-python -m pip install --user bubbling_firebase_authentication/dist/bubbling-firebase-authentication-0.1.tar.gz
+python -m pip install --user bubbling_firebase_authentication/dist/bubbling-firebase-authentication-0.2.tar.gz
 ```
 
