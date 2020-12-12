@@ -6,7 +6,7 @@ from rest_framework.authentication import BaseAuthentication, get_authorization_
 
 from firebase_admin import auth, credentials
 
-from firebase_auth.settings import firebase_auth_settings
+from bubbling_firebase_authentication.settings import firebase_auth_settings
 
 User = get_user_model()
 
