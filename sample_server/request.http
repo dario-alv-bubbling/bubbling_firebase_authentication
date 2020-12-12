@@ -1,0 +1,18 @@
+
+### request login
+
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "dimitris@samaras.com",
+    "password": "password"
+}
+
+### login 2
+POST http://localhost:3000/login-with-token HTTP/1.1
+Content-Type: application/json
+
+{
+    "token":"eyJ0eXAiOiAiSldUIiwgImFsZyI6ICJSUzI1NiIsICJraWQiOiAiZmUzNzUzMGU5NTI4ZGMzYzc1MWZiODg0MDUyODM0MjM1NTJkOGJjZSJ9.eyJpc3MiOiAiZmlyZWJhc2UtYWRtaW5zZGstbHZxamZAYnViYmxpbmctcHJvamVjdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsICJzdWIiOiAiZmlyZWJhc2UtYWRtaW5zZGstbHZxamZAYnViYmxpbmctcHJvamVjdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsICJhdWQiOiAiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCAidWlkIjogIjEzX19hMmVlNGE2ZS1hMjNkLTQxNmYtOWNkNy0zYzQ5YzA1Nzk2NmIiLCAiaWF0IjogMTYwNTgwMDU3NywgImV4cCI6IDE2MDU4MDQxNzd9.jq5e5dRRALqfkYii_cfGTMJ7BYK4qXT9b-eJVvvINuU0HKOZcgvXzfWkl-WDDKJ0AruHDOhVMSpiLWYTrGc9imtY-XiX2EbeTpb0-PXE7rqtiErseZyM6nHkYTC7pOWazrFkYIxqH5Wig4gr2NbPpbKTN49OWn8Hymp58LuF_AwpQsOfn3sRcKcUeaNN-pcqJXwmccPkMuKIRTF-0WqHgaWnW-ET3xipjm6nz9DnFlm-y5s7vphT4Y0OSRa3cLnrVYMlWciLrUBthRzF2h5-G0qyT817df6mPLvoH9Lvkj-6LTCgrtAH3RdTz85q4IFhO86bNENYfM4ExMKZ_PiTjw"
+}
