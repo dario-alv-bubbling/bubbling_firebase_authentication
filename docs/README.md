@@ -1,7 +1,7 @@
 **how to:**
 
 1. Get your credentials
-Get your admin credentials `.json` from the Firebase SDK and add them to your project in `<project_name>/settings` (or base directorey) folder named as `firebase-cert.json`!
+Get your admin credentials `.json` from the Firebase SDK and add them to your project in `<project_name>/settings` (or base directory) folder named as `firebase-cert.json`!
 
 Get your web api key and add it to your local .env file.
 
@@ -25,7 +25,7 @@ FIREBASE_AUTH = {
 }
 ```
 
-3. Add "softdelete" to your INSTALLED_APPS setting like this::
+3. Add `bubbling_firebase_authentication` to your INSTALLED_APPS setting like this::
 ```djangotemplate
     INSTALLED_APPS = [
         ...
@@ -62,10 +62,9 @@ class User(AbstractUser, SoftDeleteModel):
     ...
     def get_firebase_uid(self):
         return f'{str(self.pk)}__{str(self.firebase_uuid)}'
-
+```
 
 Usage in views
-```
 ```djangotemplate
     from bubbling_firebase_authentication.firebase_anonymous_permissions import IsAuthenticatedAnonymous // for anonymous authentication, simply check that jwt is valid in firebase
 
