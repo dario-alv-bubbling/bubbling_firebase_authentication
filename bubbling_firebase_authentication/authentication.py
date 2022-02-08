@@ -1,4 +1,4 @@
-from django.conf import settings
+from django.apps import apps
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AnonymousUser
 from django.utils.translation import gettext as _
@@ -7,7 +7,7 @@ from rest_framework.authentication import BaseAuthentication, get_authorization_
 
 from firebase_admin import auth, credentials
 
-from bubbling_firebase_authentication.settings import firebase_auth_settings
+from bubbling_firebase_authentication.settings import firebase_auth_settings, APP_NAME
 
 User = get_user_model()
 
@@ -34,7 +34,7 @@ class BaseFirebaseAuthentication(BaseAuthentication):
 
         try:
             payload = auth.verify_id_token(firebase_token,
-                                           app=settings.FIREBASE_AUTHENTICATION_APP,
+                                           app=apps.get_config(APP_NAME).firebase_app,
                                            check_revoked=True)
         except ValueError:
             msg = _("Invalid firebase ID token.")
