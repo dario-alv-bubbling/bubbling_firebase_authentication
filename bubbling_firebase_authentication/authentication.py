@@ -136,6 +136,7 @@ class FirebaseAuthenticationAnonymous(BaseFirebaseAuthentication):
         uid_strings = uid.split(self.uid_separator)  # [user id , firebase uuid]
         user = AnonymousUser()
         user.id = uid_strings[0]
+        setattr(user, 'uuid', uid_strings[1])
         return user
 
     def create_user_from_firebase(
